@@ -52,7 +52,7 @@ Powered by Hydejack v9.0.4 <https://hydejack.com/>
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="EXPERIENCE" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"<firstname> <lastname>"},"description":"Geonhwan Ju","@type":"WebPage","url":"https://ghju.github.io/experience/","headline":"EXPERIENCE","dateModified":"2022-07-31T23:50:28+09:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ghju.github.io/assets/img/about/profile.png"},"name":"<firstname> <lastname>"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"<firstname> <lastname>"},"headline":"EXPERIENCE","dateModified":"2023-06-11T04:05:49+09:00","description":"Geonhwan Ju","@type":"WebPage","url":"https://ghju.github.io/experience/","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ghju.github.io/assets/img/about/profile.png"},"name":"<firstname> <lastname>"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -245,23 +245,34 @@ Left here for reference, feel free to delete.
 
   </header>
 
-  <ol class="large-only" id="markdown-toc">
-  <li><a href="#staff-data-scientist--coupang" id="markdown-toc-staff-data-scientist--coupang">Staff Data Scientist / Coupang</a></li>
-  <li><a href="#principal-data-scientist--unknot" id="markdown-toc-principal-data-scientist--unknot">Principal Data Scientist / Unknot</a></li>
-  <li><a href="#data-scientist--zalando" id="markdown-toc-data-scientist--zalando">Data Scientist / Zalando</a></li>
-  <li><a href="#research-scientist--lunit" id="markdown-toc-research-scientist--lunit">Research Scientist / Lunit</a></li>
-  <li><a href="#quantitative-analyst--nh-investment--securities" id="markdown-toc-quantitative-analyst--nh-investment--securities">Quantitative Analyst / NH Investment &amp; Securities</a></li>
-  <li><a href="#phd-research-topics--kaist" id="markdown-toc-phd-research-topics--kaist">Ph.D. research topics / KAIST</a></li>
-</ol>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
-<p><br /></p>
-<h2 id="staff-data-scientist--coupang">Staff Data Scientist / Coupang</h2>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+<div id="myDiv" style="width: 270px; height: 270; top:100px;"></div>
+<script src="../assets/js/plotly.js"></script>
+
+<!-- 1. this list will be replaced by the toc
+{:toc .large-only} -->
+
+<!-- <br> -->
+<h2 id="coupang--staff-data-scientist">Coupang / Staff Data Scientist</h2>
+
+<blockquote>
+  <p>Coupang is the first marketplace and largest online retailer in South Korea that generated $21 billion in revenue as of 2022. As a data scientist, I am actively involved in the growth of Rocket Growth, Coupang’s fulfillment service similar to FBA (Fulfillment by Amazon).</p>
+</blockquote>
 
 <blockquote>
 
-  <p><span class="experience-title-text">ROD(Rocket on Demand) - Fulfillment by Coupang</span></p>
+  <!-- <span class="experience-title-text">Data Science for Rocket Growth (Fulfillment service by Coupang)</span> -->
   <ul>
-    <li>Leading the data science/analytics team for ROD(Rocket on Demand) product</li>
+    <li><span class="experience-subtitle-text" id="coupang_team">Team establishment </span> - Established and led a data science/analytics team dedicated to Rocket Growth.</li>
+    <li><span class="experience-subtitle-text" id="coupang_pricing">Pricing policy analysis </span> - Employed price elasticity modeling and A/B testing to perform a comprehensive analysis of the pricing strategy.</li>
+    <li><span class="experience-subtitle-text" id="coupang_fee">Fee structure optimization </span> - Conducted simulations and redesigned the seller fee structure for optimal performance.</li>
+    <li><span class="experience-subtitle-text" id="coupang_seller">Seller retention and growth </span> - Developed and implemented machine learning models to enhance seller retention and drive growth.</li>
+    <li><span class="experience-subtitle-text" id="coupang_kpi">KPI development and dashboard design </span> - Played a crucial role in developing KPIs and designing dashboards across the entire e-commerce business domain, covering areas such as seller acquisition, logistics, pricing, and sales.</li>
   </ul>
 </blockquote>
 
@@ -269,18 +280,19 @@ Left here for reference, feel free to delete.
   <li><span class="text3" style="font-family: Lato-Bold; font-size: 14px">Keywords:</span> 
 <span class="text3" style="font-size: 14px">E-commerce, Logistics, Inventory management, Decision science </span></li>
   <li><span class="text3" style="font-family: Lato-Bold; font-size: 14px">Tools:</span> 
-<span class="text3" style="font-size: 14px">Python(Plotly, Pandas), SQL, Docker, Git, Linux(zsh/vim/tmux)</span></li>
+<span class="text3" style="font-size: 14px">Python, SQL, Airflow, Docker, Git, Linux(zsh/vim/tmux)</span></li>
 </ul>
 
 <p><br /></p>
-<h2 id="principal-data-scientist--unknot">Principal Data Scientist / Unknot</h2>
+<h2 id="unknot--principal-data-scientist">Unknot / Principal Data Scientist</h2>
 
 <blockquote>
 
-  <p><span class="experience-title-text">ML models for algorithm trading</span></p>
+  <!-- <span class="experience-title-text">Algorithmic trading system</span> -->
   <ul>
-    <li>Developed deep learning-based trading algorithms for cryptocurrency &amp; commodity futures markets</li>
-    <li>Built a real-time monitoring system for algorithmic trading</li>
+    <li><span class="experience-subtitle-text" id="unknot_at">Algorithmic trading </span> - Designed and developed deep learning-based models for trading in commodity futures and cryptocurrency markets.</li>
+    <li><span class="experience-subtitle-text" id="unknot_pm">Portfolio management </span> - Implemented a portfolio rebalancing algorithm tailored for multi-asset algorithmic trading, enhancing portfolio performance and mitigating risks.</li>
+    <li><span class="experience-subtitle-text" id="unknot_tms">Trade monitoring system </span> - Constructed a robust real-time monitoring system specifically tailored for algorithmic trading, ensuring efficient and timely decision-making in a dynamic market environment.</li>
   </ul>
 </blockquote>
 
@@ -292,47 +304,42 @@ Left here for reference, feel free to delete.
 </ul>
 
 <p><br /></p>
-<h2 id="data-scientist--zalando">Data Scientist / Zalando</h2>
+<h2 id="zalando--data-scientist"><a href="https://corporate.zalando.com/en/about-us/who-we-are/zalando-glance">Zalando</a> / Data Scientist</h2>
 
 <blockquote>
 
-  <p><a href="https://corporate.zalando.com/en/company/zalando-at-a-glance"><span class="experience-title-text"> Zalando </span></a></p>
   <ul>
-    <li>Zalando is a fashion E-commerce company with a revenue of €10 billion and 46 million active customers in Europe.</li>
-    <li>I worked as a data scientist for a competitive pricing team developing pricing algorithms and analyzing sales data and business impacts.</li>
+    <li>Zalando is a fashion e-commerce company that generated €10 billion in revenue and had 46 million active customers in Europe as of 2020. I served as a data scientist in a competitive pricing team, focusing on pricing algorithm development and the analysis of sales data and business impacts.</li>
   </ul>
 </blockquote>
 
 <blockquote>
 
-  <p><span class="experience-title-text">Product-level ROI(Return on investment) estimation</span></p>
   <ul>
-    <li>The main goal of the project was to estimate the efficiency of competitive pricing at the product level</li>
-    <li>Estimates are calculated based on product attributes(such as price, COGS(cost of goods sold), and inventory level) and weekly sales forecasts.</li>
-    <li>Designed &amp; conducted monthly A/B tests to measure the business impact and accuracy of the model.</li>
-    <li>The proposed model improved profit by 4 million euros per annum.</li>
+    <li><span class="experience-subtitle-text" id="zalando_po">Price optimization </span> - Optimized revenue and profitability by assessing the effectiveness of competitive pricing through precise estimation of ROI, conducting monthly A/B tests for quantitative evaluation, resulting in a significant annual profit increase of 4 million euros.</li>
+    <li><span class="experience-subtitle-text" id="zalando_df">Demand forecast &amp; competitive pricing</span> - Conducted a comprehensive analysis of competitors’ pricing strategy on sales performance utilizing cross-price elasticity of demand analysis, and developed a deep-learning model for sales forecasting to improve forecast bias for competitive products.</li>
+    <li><span class="experience-subtitle-text" id="zalando_pm">Product matching </span> - Developed an ML pipeline integrating multi-modal embeddings and similarity calculation to match products from competitors’ websites with Zalando products, incorporating pre-trained deep learning models for enhanced embeddings.</li>
   </ul>
 </blockquote>
 
-<blockquote>
+<!-- >
+<span class="experience-title-text">Product-level ROI(Return on investment) estimation</span>
+* The primary objective of the project was to assess the effectiveness of competitive pricing, aiming to optimize revenue and profitability.
+* Precise estimates were derived by integrating key product attributes, such as price, COGS (Cost of Goods Sold), inventory level, and leveraging sales forecasts.
+* Designed and executed monthly A/B tests to quantitatively evaluate the model's business impact and ensure its accuracy.
+* Implementation of the proposed model yielded a substantial annual profit increase of 4 million euros, delivering notable financial gains.
 
-  <p><span class="experience-title-text">Cross-price elasticity of demand</span></p>
-  <ul>
-    <li>Analyzed the impact of competitors’ pricing strategy on sales.</li>
-    <li>Identified major competitors by analyzing the cross-price elasticity of demand.</li>
-    <li>Trained a deep-learning model for sales forecast and improved forecast bias for competitive products.</li>
-  </ul>
-</blockquote>
+>
+<span class="experience-title-text">Cross-price elasticity of demand</span>
+* Conducted an in-depth analysis of the impact of competitors' pricing strategy on sales performance.
+* Utilized cross-price elasticity of demand analysis to identify major competitors and their influence on market dynamics.
+* Developed and trained a deep-learning model for sales forecasting, effectively improving forecast bias for competitive products.
 
-<blockquote>
-
-  <p><span class="experience-title-text">ML pipeline for product matching </span></p>
-  <ul>
-    <li>Built a ML pipeline to match the products crawled from competitors’ websites with Zalando products.</li>
-    <li>The pipeline consists of two main parts, one for calculating multi-modal embeddings and the other for similarity calculation.</li>
-    <li>Pre-trained deep learning models such as fashion DNA, CLIP, and BERT were also integrated into the pipeline for richer embeddings.</li>
-  </ul>
-</blockquote>
+>
+<span class="experience-title-text">ML pipeline for product matching </span>
+* Built a ML pipeline to match the products crawled from competitors' websites with Zalando products. 
+* The pipeline consists of two main parts, one for calculating multi-modal embeddings and the other for similarity calculation. 
+* Pre-trained deep learning models such as fashion DNA, CLIP, and BERT were also integrated into the pipeline for richer embeddings. -->
 
 <ul>
   <li><span class="text3" style="font-family: Lato-Bold; font-size: 14px">Keywords:</span> 
@@ -342,11 +349,10 @@ Left here for reference, feel free to delete.
 </ul>
 
 <p><br /></p>
-<h2 id="research-scientist--lunit">Research Scientist / Lunit</h2>
+<h2 id="lunit--research-scientist"><a href="https://www.lunit.io/en">Lunit</a> / Research Scientist</h2>
 
 <blockquote>
 
-  <p><a href="https://www.lunit.io/en"><span class="experience-title-text">Lunit</span></a></p>
   <ul>
     <li>Lunit is a medical software company providing AI solutions that help discover cancer and predict cancer treatment outcomes.</li>
   </ul>
@@ -354,13 +360,16 @@ Left here for reference, feel free to delete.
 
 <blockquote>
 
-  <p><a href="https://www.lunit.io/en/products/insight-cxr"><span class="experience-title-text">AI solution for chest x-ray</span></a>
-<img src="../assets/img/exp/lunit_cxr.png" alt="Screenshot" class="lead" style="float: center; max-width: 600px; margin-left: 30px; margin-bottom: 0px; margin-top: 10px;" loading="lazy" /></p>
   <ul>
-    <li>Developed CNN models for detecting abnormalities on chest x-ray images which outperformed experienced radiologists.</li>
-    <li>The model also enhanced the performance of radiologists when used as a second reader.</li>
+    <li><span class="experience-subtitle-text" id="lunit_ai"><a href="https://www.lunit.io/en/products/cxr">AI solution for medical images</a> </span> - Developed CNN models for chest x-ray image analysis, surpassing the performance of experienced radiologists and improving radiologists’ performance as a second reader.</li>
   </ul>
 </blockquote>
+
+<!-- >
+[<span class="experience-title-text">AI solution for chest x-ray</span>](https://www.lunit.io/en/products/cxr)
+![Screenshot](../assets/img/exp/lunit_cxr.png){:.lead style="float: center; max-width: 600px; margin-left: 30px; margin-bottom: 0px; margin-top: 10px;" loading="lazy"}
+* Developed CNN models for detecting abnormalities on chest x-ray images which outperformed experienced radiologists.
+* The model also enhanced the performance of radiologists when used as a second reader. -->
 
 <ul>
   <li><span class="text3" style="font-family: Lato-Bold; font-size: 14px">Keywords:</span> 
@@ -374,13 +383,16 @@ Left here for reference, feel free to delete.
 
 <blockquote>
 
-  <p><span class="experience-title-text">Pricing engine for financial derivatives </span></p>
   <ul>
-    <li>Worked as a quantitative analyst in FICC(Fixed income instruments, Currencies, and Commodities) trading team.</li>
-    <li>Developed pricing models with Monte Carlo simulation.</li>
-    <li>Managed financial risk for the team and conducted scenario analyses.</li>
+    <li><span class="experience-subtitle-text" id="nh_pricing">Pricing engine for financial derivatives </span> - As a quantitative analyst in the FICC trading team, developed pricing models using Monte Carlo simulation, while also overseeing financial risk management and conducting scenario analyses.</li>
   </ul>
 </blockquote>
+
+<!-- > 
+<span class="experience-title-text">Pricing engine for financial derivatives </span>
+* Worked as a quantitative analyst in FICC(Fixed income instruments, Currencies, and Commodities) trading team.
+* Developed pricing models with Monte Carlo simulation.
+* Managed financial risk for the team and conducted scenario analyses. -->
 
 <ul>
   <li><span class="text3" style="font-family: Lato-Bold; font-size: 14px">Keywords:</span> 
@@ -394,42 +406,36 @@ Left here for reference, feel free to delete.
 
 <blockquote>
 
-  <p><span class="experience-title-text">High-Frequency Market Analysis with Deep Learning </span></p>
   <ul>
-    <li>Built a deep learning model for predicting the high-frequency market movements.</li>
-    <li>Optimized the performance and stability of the prediction model.</li>
-    <li>Visualized and analyzed the influence of market features using gradients.</li>
+    <li><span class="experience-subtitle-text" id="phd_1">High-frequency market analysis with deep learning </span> - Developed and optimized a deep learning model for high-frequency market prediction, leveraging gradient analysis to visualize and analyze market feature influences.</li>
+    <li><span class="experience-subtitle-text" id="phd_2">High-frequency market making algorithm</span> - Created and validated high-frequency trading algorithms using deep reinforcement learning, employing a simulated environment based on historical market data to ensure performance and stability of the trained policy.</li>
+    <li><span class="experience-subtitle-text" id="phd_3">Quantitative trader behavior analysis </span> - Implemented a quantitative framework utilizing inverse reinforcement learning to measure and analyze the behavioral characteristics of market participants, examining how their behavior evolves in response to market conditions.</li>
+    <li><span class="experience-subtitle-text" id="phd_4">3D Ultrasound Image Reconstruction </span> - Developed a robust framework for 3D ultrasound image reconstruction with Markov random field modeling to enhance the quality and accuracy of the reconstructed models.</li>
   </ul>
 </blockquote>
 
-<blockquote>
+<!-- > 
+<span class="experience-title-text">High-Frequency Market Analysis with Deep Learning </span>
+* Built a deep learning model for predicting the high-frequency market movements.
+* Optimized the performance and stability of the prediction model.
+* Visualized and analyzed the influence of market features using gradients.
 
-  <p><span class="experience-title-text">High-Frequency Trading Algorithm </span></p>
-  <ul>
-    <li>Developed high-frequency trading algorithms with deep reinforcement learning.</li>
-    <li>Built a simulated environment for high-frequency trading based on historical market data.</li>
-    <li>Validated the performance and convergence of the trained policy.</li>
-  </ul>
-</blockquote>
+> 
+<span class="experience-title-text">High-Frequency Trading Algorithm </span>
+* Developed high-frequency trading algorithms with deep reinforcement learning.
+* Built a simulated environment for high-frequency trading based on historical market data.
+* Validated the performance and convergence of the trained policy.
 
-<blockquote>
+> 
+<span class="experience-title-text">Trader Behavior Analysis </span>
+* Developed a quantitative framework to measure the behavioral characteristics of market participants. 
+* Measured the behavioral characteristics of traders using inverse RL.
+* Analyzed how their behavior changes with market conditions.
 
-  <p><span class="experience-title-text">Trader Behavior Analysis </span></p>
-  <ul>
-    <li>Developed a quantitative framework to measure the behavioral characteristics of market participants.</li>
-    <li>Measured the behavioral characteristics of traders using inverse RL.</li>
-    <li>Analyzed how their behavior changes with market conditions.</li>
-  </ul>
-</blockquote>
-
-<blockquote>
-
-  <p><span class="experience-title-text">3D Ultrasound Image Reconstruction </span></p>
-  <ul>
-    <li>Developed a framework to reconstruct 3D models from ultrasound images.</li>
-    <li>Built a Markov random field model to improve the quality of reconstruction.</li>
-  </ul>
-</blockquote>
+> 
+<span class="experience-title-text">3D Ultrasound Image Reconstruction </span>
+* Developed a framework to reconstruct 3D models from ultrasound images.
+* Built a Markov random field model to improve the quality of reconstruction. -->
 
 <ul>
   <li><span class="text3" style="font-family: Lato-Bold; font-size: 14px">Keywords:</span> 
