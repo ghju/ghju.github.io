@@ -100,7 +100,7 @@ layout = {width: 270,
           shapes: [    {
             type: 'path',
             path: 'M -2.5 4.33 L 2.5 4.33 L 0 0 Z',
-            fillcolor: 'rgba(0, 0, 0, 0.9)',
+            fillcolor: 'rgba(15, 15, 15, 0.9)',
             line: {
               color: 'rgba(255, 255, 255, 0.7)'
             },
