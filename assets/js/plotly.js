@@ -161,17 +161,23 @@ layout = {width: 270,
 config = {displayModeBar: false}
 Plotly.newPlot('myDiv', data, layout, config);
 myPlot.on('plotly_click', function(eventdata){
-var compid = key_id[eventdata.points[0]['text']]
-var comp = document.getElementById(compid)
-comp.scrollIntoView({behavior: 'smooth'});
-$(comp).animate({backgroundColor:"rgba(200, 200, 255, 0.6)"}, 300);
-$(comp).animate({backgroundColor:"rgba(200, 200, 255, 0.3)"}, 300);
+    var compid = key_id[eventdata.points[0]['text']]
+    var comp = document.getElementById(compid)
+    comp.scrollIntoView({behavior: 'smooth'});
+    $(comp).stop().animate({backgroundColor:"rgba(200, 200, 255, 0.6)"}, 300);
+    if ($(window).width() > 1300) {
+        $(comp).animate({backgroundColor:"rgba(200, 200, 255, 0.3)"}, 300);
+    }
+    else {
+        $(comp).animate({backgroundColor:"rgba(200, 200, 255, 0.0)"}, 3000);
+    }
 });
 
 myPlot.on('plotly_hover', function(eventdata){
     var compid = key_id[eventdata.points[0]['text']]
     var comp = document.getElementById(compid)
     $(comp).stop().animate({backgroundColor:"rgba(200, 200, 255, 0.3)"}, 200);
+    // $(comp).animate({backgroundColor:"rgba(200, 200, 255, 0.0)"}, 3000);
 });
 
  myPlot.on('plotly_unhover', function(eventdata){
