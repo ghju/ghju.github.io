@@ -71,6 +71,36 @@ data = [{x:coupang_x, y:coupang_y, text:coupang_text,
             type:'scatter',
                 mode:'markers', marker:{size:7, color:'rgba(255, 255, 50,0.9)'}
         }],
+data2 = [{x:coupang_x, y:coupang_y, text:coupang_text, 
+          hoverlabel: { bgcolor: "rgba(112,198,255,0.3)", align: "left"},
+          hovertemplate: "%{text}<extra></extra>",    
+          type:'scatter',
+           mode:'markers', marker:{size:30, color:'rgba(112,198,255,0.4)'}
+          },
+          {x:unknot_x, y:unknot_y, text:unknot_text, 
+              hoverlabel: { bgcolor: "rgba(51, 204, 51,0.3)", align: "left"},
+              hovertemplate: "%{text}<extra></extra>",    
+              type:'scatter',
+               mode:'markers', marker:{size:30, color:'rgba(51, 204, 51,0.4)'}
+          },
+          {x:zalando_x, y:zalando_y, text:zalando_text, 
+              hoverlabel: { bgcolor: "rgba(255, 153, 51,0.3)", align: "left"},
+              hovertemplate: "%{text}<extra></extra>",    
+              type:'scatter',
+                  mode:'markers', marker:{size:30, color:'rgba(255, 153, 51,0.4)'}
+          },
+          {x:lunit_x, y:lunit_y, text:lunit_text, 
+              hoverlabel: { bgcolor: "rgba(0, 51, 204,0.3)", align: "left"},
+              hovertemplate: "%{text}<extra></extra>",    
+              type:'scatter',
+                  mode:'markers', marker:{size:30, color:'rgba(0, 51, 204,0.4)'}
+          },
+          {x:nh_x, y:nh_y, text:nh_text, 
+              hoverlabel: { bgcolor: "rgba(255, 255, 50,0.3)", align: "left"},
+              hovertemplate: "%{text}<extra></extra>",    
+              type:'scatter',
+                  mode:'markers', marker:{size:30, color:'rgba(255, 255, 50,0.4)'}
+          }],
 layout = {width: 270, 
         height: 270,
         pad: 0,
@@ -96,7 +126,7 @@ layout = {width: 270,
             showticklabels: false, 
             fixedrange: true,
             range: [-0.5,5.5]},
-          margin: {l:50, r:0, t:0, b:50},
+          margin: {l:30, r:20, t:0, b:50},
           shapes: [    {
             type: 'path',
             path: 'M -2.5 4.33 L 2.5 4.33 L 0 0 Z',
@@ -159,16 +189,76 @@ layout = {width: 270,
 
  };
 config = {displayModeBar: false}
-Plotly.newPlot('myDiv', data, layout, config);
+// Plotly.newPlot('myDiv', data, layout, config);
+
+// test area - start
+
+Plotly.newPlot('myDiv', data, layout, config).then(function () {
+  Plotly.addFrames('myDiv', [
+    {
+      data: data,
+      name: 'frame1'
+    }, {
+      data: data2,
+      name: 'frame2'
+    }
+  ]);
+});
+
+
+function startAnimation() {
+  Plotly.animate('myDiv', ['frame2', 'frame1', 'frame2', 'frame1'], {
+    frame: [
+      {duration: 500},
+      {duration: 500},
+      {duration: 500},
+      {duration: 500},
+      {duration: 500},
+    ],
+    transition: [
+      {duration: 500, easing: 'cubic-in'},
+      {duration: 500, easing: 'cubic-in'},
+      {duration: 500, easing: 'cubic-in'},
+      {duration: 500, easing: 'cubic-in'},
+      {duration: 500, easing: 'cubic-in'},
+    ],
+    mode: 'immediate'
+  })
+}
+
+function triggerHover() {
+  Plotly.Fx.hover('myDiv',[
+    {curveNumber:0, pointNumber:2}
+]);
+
+}
+
+// function startAnimation () {
+//   Plotly.animate('myDiv', {
+//     data: data2
+//   }, {
+//     transition: {
+//       duration: 500
+//     },
+//     frame: {
+//       duration: 500,
+//       redraw: true
+//     }
+//   });
+// }
+
+// test area -end
+
 myPlot.on('plotly_click', function(eventdata){
     var compid = key_id[eventdata.points[0]['text']]
     var comp = document.getElementById(compid)
-    comp.scrollIntoView({behavior: 'smooth'});
-    $(comp).stop().animate({backgroundColor:"rgba(200, 200, 255, 0.6)"}, 300);
     if ($(window).width() > 1300) {
+        comp.scrollIntoView({behavior: 'smooth'});
+        $(comp).stop().animate({backgroundColor:"rgba(200, 200, 255, 0.6)"}, 300);
         $(comp).animate({backgroundColor:"rgba(200, 200, 255, 0.3)"}, 300);
     }
     else {
+        $(comp).stop().animate({backgroundColor:"rgba(200, 200, 255, 0.6)"}, 300);
         $(comp).animate({backgroundColor:"rgba(200, 200, 255, 0.0)"}, 3000);
     }
 });
@@ -185,3 +275,5 @@ myPlot.on('plotly_hover', function(eventdata){
     var comp = document.getElementById(compid)
     $(comp).stop().animate({backgroundColor:"rgba(200, 200, 255, 0.0)"}, 200);
 });
+
+
