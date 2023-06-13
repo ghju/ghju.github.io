@@ -102,7 +102,7 @@ data2 = [{x:coupang_x, y:coupang_y, text:coupang_text,
                   mode:'markers', marker:{size:7, color:'rgba(255, 255, 50,0.9)'}
           }],
 layout = {width: 270, 
-        height: 300,
+        height: 309,
         pad: 0,
         hovermode:'closest',
         showTips: false,
