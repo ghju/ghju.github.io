@@ -260,7 +260,7 @@ myPlot.on('plotly_legendclick',function() { return false; })
 myPlot.on('plotly_click', function(eventdata){
     var compid = key_id[eventdata.points[0]['text']]
     var comp = document.getElementById(compid)
-    if ($(window).width() > 1300) {
+    if ($(window).width() > 1500) {
         comp.scrollIntoView({behavior: 'smooth'});
         $(comp).stop().animate({backgroundColor:"rgba(200, 200, 255, 0.6)"}, 300);
         $(comp).animate({backgroundColor:"rgba(200, 200, 255, 0.3)"}, 300);
