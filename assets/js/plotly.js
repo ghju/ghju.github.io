@@ -1,23 +1,23 @@
 var key_id = {}
 
 key_id['<b>Coupang</b><br>Pricing policy analysis'] = 'coupang_pricing'
-key_id['<b>Coupang</b><br>Fee structure optimization'] = 'coupang_fee'
-key_id['<b>Coupang</b><br>Seller retention <br>and growth'] = 'coupang_seller'
+key_id['<b>Coupang</b><br>Fee structure <br>optimization'] = 'coupang_fee'
+key_id['<b>Coupang</b><br>Seller retention and<br>growt modeling'] = 'coupang_seller'
 key_id['<b>Coupang</b><br>KPI development <br>and dashboard design'] = 'coupang_kpi'
-coupang_x = [1, 0.8, -0.4, 0.3],
-coupang_y = [3.4, 2.2, 1.9, 1.3],
+coupang_x = [1, 0.3, -0.4, 0.8],
+coupang_y = [3.4, 1.3, 1.9, 2.2],
 coupang_text = ['<b>Coupang</b><br>Pricing policy analysis', 
-        '<b>Coupang</b><br>Fee structure optimization',
-        '<b>Coupang</b><br>Seller retention <br>and growth',
+        '<b>Coupang</b><br>Fee structure <br>optimization',
+        '<b>Coupang</b><br>Seller retention and<br>growth modeling',
         '<b>Coupang</b><br>KPI development <br>and dashboard design']
 
 key_id['<b>Unknot</b><br>Algorithmic trading'] = 'unknot_at'
-key_id['<b>Unknot</b><br>Portfolio management'] = 'unknot_pm'
+key_id['<b>Unknot</b><br>Portfolio <br>management'] = 'unknot_pm'
 key_id['<b>Unknot</b><br>Trade monitoring system'] = 'unknot_tms'
 unknot_x = [-1.4, 0, 1.5],
 unknot_y = [3.8, 3.5, 3.3],
 unknot_text = ['<b>Unknot</b><br>Algorithmic trading', 
-        '<b>Unknot</b><br>Portfolio management',
+        '<b>Unknot</b><br>Portfolio <br>management',
         '<b>Unknot</b><br>Trade monitoring system']
 
 key_id['<b>Zalando</b><br>Price optimization'] = 'zalando_po'
@@ -44,68 +44,75 @@ var myPlot = document.getElementById('myDiv'),
 data = [{x:coupang_x, y:coupang_y, text:coupang_text, 
         hoverlabel: { bgcolor: "rgba(112,198,255,0.3)", align: "left"},
         hovertemplate: "%{text}<extra></extra>",    
-        type:'scatter',
+        type:'scatter', name:'Coupang',
          mode:'markers', marker:{size:7, color:'rgba(112,198,255,0.9)'}
         },
         {x:unknot_x, y:unknot_y, text:unknot_text, 
             hoverlabel: { bgcolor: "rgba(51, 204, 51,0.3)", align: "left"},
             hovertemplate: "%{text}<extra></extra>",    
-            type:'scatter',
+            type:'scatter', name:'Unknot',
              mode:'markers', marker:{size:7, color:'rgba(51, 204, 51,0.9)'}
         },
         {x:zalando_x, y:zalando_y, text:zalando_text, 
             hoverlabel: { bgcolor: "rgba(255, 153, 51,0.3)", align: "left"},
             hovertemplate: "%{text}<extra></extra>",    
-            type:'scatter',
+            type:'scatter', name:'Zalando',
                 mode:'markers', marker:{size:7, color:'rgba(255, 153, 51,0.9)'}
         },
         {x:lunit_x, y:lunit_y, text:lunit_text, 
             hoverlabel: { bgcolor: "rgba(0, 51, 204,0.3)", align: "left"},
             hovertemplate: "%{text}<extra></extra>",    
-            type:'scatter',
+            type:'scatter', name:'Lunit',
                 mode:'markers', marker:{size:7, color:'rgba(0, 51, 204,0.9)'}
         },
         {x:nh_x, y:nh_y, text:nh_text, 
             hoverlabel: { bgcolor: "rgba(255, 255, 50,0.3)", align: "left"},
             hovertemplate: "%{text}<extra></extra>",    
-            type:'scatter',
+            type:'scatter', name:'NHIS',
                 mode:'markers', marker:{size:7, color:'rgba(255, 255, 50,0.9)'}
         }],
 data2 = [{x:coupang_x, y:coupang_y, text:coupang_text, 
           hoverlabel: { bgcolor: "rgba(112,198,255,0.3)", align: "left"},
           hovertemplate: "%{text}<extra></extra>",    
-          type:'scatter',
-           mode:'markers', marker:{size:30, color:'rgba(112,198,255,0.4)'}
+          type:'scatter', 
+           mode:'markers', marker:{size:[7,7,20,7], color:'rgba(112,198,255,0.9)', line:{width:0}}
           },
           {x:unknot_x, y:unknot_y, text:unknot_text, 
               hoverlabel: { bgcolor: "rgba(51, 204, 51,0.3)", align: "left"},
               hovertemplate: "%{text}<extra></extra>",    
               type:'scatter',
-               mode:'markers', marker:{size:30, color:'rgba(51, 204, 51,0.4)'}
+               mode:'markers', marker:{size:7, color:'rgba(51, 204, 51,0.9)'}
           },
           {x:zalando_x, y:zalando_y, text:zalando_text, 
               hoverlabel: { bgcolor: "rgba(255, 153, 51,0.3)", align: "left"},
               hovertemplate: "%{text}<extra></extra>",    
               type:'scatter',
-                  mode:'markers', marker:{size:30, color:'rgba(255, 153, 51,0.4)'}
+                  mode:'markers', marker:{size:7, color:'rgba(255, 153, 51,0.9)'}
           },
           {x:lunit_x, y:lunit_y, text:lunit_text, 
               hoverlabel: { bgcolor: "rgba(0, 51, 204,0.3)", align: "left"},
               hovertemplate: "%{text}<extra></extra>",    
               type:'scatter',
-                  mode:'markers', marker:{size:30, color:'rgba(0, 51, 204,0.4)'}
+                  mode:'markers', marker:{size:7, color:'rgba(0, 51, 204,0.9)'}
           },
           {x:nh_x, y:nh_y, text:nh_text, 
               hoverlabel: { bgcolor: "rgba(255, 255, 50,0.3)", align: "left"},
               hovertemplate: "%{text}<extra></extra>",    
               type:'scatter',
-                  mode:'markers', marker:{size:30, color:'rgba(255, 255, 50,0.4)'}
+                  mode:'markers', marker:{size:7, color:'rgba(255, 255, 50,0.9)'}
           }],
 layout = {width: 270, 
-        height: 270,
+        height: 300,
         pad: 0,
         hovermode:'closest',
-        showlegend:false,
+        showTips: false,
+        showlegend:true,
+        legend: {
+          orientation: 'h',
+          font: {
+            color: 'rgba(255,255,255,1)'
+        },
+        },
           title: {text: 'Click on Points', font:{color:'rgba(255,255,255,1)'}},
           paper_bgcolor: 'rgba(0,0,0,0)', 
           plot_bgcolor: 'rgba(0,0,0,0.)',
@@ -248,6 +255,7 @@ function triggerHover() {
 // }
 
 // test area -end
+myPlot.on('plotly_legendclick',function() { return false; })
 
 myPlot.on('plotly_click', function(eventdata){
     var compid = key_id[eventdata.points[0]['text']]
